@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dengue Crisis in the Philippines (2019-2021)">
+    <meta name="author" content="Lechar">
+    <meta property="og:title" content="Dengue Crisis in the Philippines (2019-2021)">
+    <meta property="og:description" content="Learn about the Dengue crisis in the Philippines, including prevention tips, data, and the impact from 2019-2021.">
+  
+    <title>Dengue Crisis in the Philippines (2019-2021)</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png"  href="{{ url_for('static', filename='images/logoblue.jpg') }}">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+   
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script> <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js">
+        
+    </script><script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@2.1.0"></script>
+  
+</head>
+<body class="bg-gray-100 bg-cover bg-center">
+
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar" role="navigation">
+            <div class="navbar__logo-container">
+                <img src="{{ url_for('static', filename='images/logoblue.jpg') }}" alt="Dengue Awareness Logo" class="logo">
+                <a href="/" id="navbar__logo">Dengue</a>
+            </div>
+
+            <button class="navbar__toggle" id="mobile-menu" aria-label="Toggle navigation" aria-expanded="false">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <!-- Navigation Bar -->
+            <ul class="navbar__menu">
+                <li class="navbar__item"><a href="/" id="homeBtn" class="navbar__links ">Home</a></li>
+                <li class="navbar__item"><a href="about"  class="navbar__links active">Health</a></li>
+            </ul>
+        </nav>
+    </header>
+
+   
+
+    <!-- Main Section -->
+    <main>
+    
+       
+      
+
+        <section id="aboutSection"  
+        class="p-12 bg-white rounded-xl mt-10 mb-10 shadow-lg max-w-6xl mx-auto mt-12 flex flex-col md:flex-row items-center space-x-8">
+    
+        <!-- Mas Malaking Image -->
+        <img src="{{ url_for('static', filename='images/dengue.jpg') }}" 
+             alt="Dengue Awareness" 
+             class="w-64 h-64 md:w-80 md:h-80 rounded-xl shadow-md mb-6 md:mb-0">
+    
+        <!-- Mas Malaking Text Content -->
+        <div class="text-gray-900 max-w-2xl">
+            <br>
+            <h2 class="text-4xl font-extrabold text-gray-900 mb-6 mt-12">Health</h2>
+            <p class="text-xl leading-relaxed">
+                If you suspect you have dengue, you should seek medical care immediately. Dengue is a viral infection that can cause mild to severe symptoms. 
+            </p>
+            <ul class="list-disc list-inside text-lg text-gray-700 space-y-3 mt-4">
+                <li>✅ <b>Treatment </b>
+                <li>✅ Get lots of rest</li>
+                <li>✅ Drink plenty of fluids, especially oral rehydration salts, to prevent dehydration</li>
+                <li>✅ Take acetaminophen (paracetamol) for pain and fever</li>
+                <li>✅ Avoid aspirin and ibuprofen, which can increase the risk of bleeding</li>
+            </ul>
+            <ul class="list-disc list-inside text-lg text-gray-700 space-y-3 mt-4">
+                <li>✅ <b>Severe symptoms </b>
+                <li>✅ Seek hospitalization if you experience warning signs of severe dengue </li>
+                <li>✅ Severe dengue usually requires treatment in a hospital with intravenous (IV) fluids </li>
+                <li>✅ Patients are monitored until their fever breaks and symptoms begin to wane </li>
+            </ul>
+            <ul class="list-disc list-inside text-lg text-gray-700 space-y-3 mt-4">
+                <li>✅ <b>Severe symptoms </b>
+                <li>✅ Sleep under a treated net, especially during the period of illness with fever</li>
+                <li>✅ Avoid being bitten by mosquitoes </li>
+                <li>✅ Reduce places where mosquitoes lay their eggs  </li>
+            </ul>
+            <ul class="list-disc list-inside text-lg text-gray-700 space-y-3 mt-4">
+                <li>✅ <b>Diagnosis  </b>
+                <li>✅Your doctor will evaluate your signs and symptoms</li>
+                <li>✅ Test your blood for evidence of a dengue virus </li>
+                <li>✅ Review your medical and travel history  </li>
+            </ul>
+
+            <section id="aboutsection" class="p-6 bg-yellow-400 rounded-xl shadow-lg max-w-6xl mx-auto mt-14 text-gray-900">
+                        <p class="text-lg leading-relaxed">
+                      Prevention Sleep under a treated net, Avoid being bitten by mosquitoes, 
+                    Reduce places where mosquitoes lay their eggs, Clean up yards and patios, 
+                    and Remove or treat containers that hold water.
+                        </p>
+        </div>
+    </section>
+  
+      
+    <footer class="bg-gray-900 text-white py-10 mt-12">
+        <div class="container mx-auto text-center space-y-12">
+    
+            <!-- About Us -->
+            <div>
+                <h2 class="text-2xl font-semibold">About Us</h2>
+                <p class="text-gray-300 mt-2 max-w-lg mx-auto">
+                    We are dedicated to raising awareness about Dengue and providing 
+                    reliable information to help protect communities.
+                </p>
+            </div>
+    
+            <!-- Contact Us -->
+            <div>
+                <h2 class="text-2xl font-semibold">Contact Us</h2>
+                <p class="text-gray-300 mt-2">Address: Bunakan, Madridejos, Cebu</p>
+                <p class="text-gray-300">Phone: +63 945 844 7989</p>
+                <p class="text-gray-300">✉ Email: denguewebsite@gmail.com</p>
+            </div>
+    
+            <!-- Social Media -->
+            <div>
+                <h2 class="text-2xl font-semibold">Follow Us</h2>
+                <div class="flex justify-center space-x-6 mt-4">
+                    <a href="#" class="text-gray-400 hover:text-blue-400 text-2xl">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-blue-300 text-2xl">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-pink-400 text-2xl">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-red-400 text-2xl">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

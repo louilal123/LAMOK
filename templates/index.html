@@ -1,0 +1,1215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dengue Crisis in the Philippines (2019-2021)">
+    <meta name="author" content="Lechar">
+    <meta property="og:title" content="Dengue Crisis in the Philippines (2019-2021)">
+    <meta property="og:description" content="Learn about the Dengue crisis in the Philippines, including prevention tips, data, and the impact from 2019-2021.">
+  
+   
+    <title>Dengue Crisis in the Philippines (2019-2021)</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png"  href="{{ url_for('static', filename='images/logoblue.jpg') }}">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script> <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js">
+        
+    </script><script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@2.1.0"></script>
+  
+</head>
+<body class="bg-gray-100 bg-cover bg-center">
+
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar" role="navigation">
+            <div class="navbar__logo-container">
+                <img src="{{ url_for('static', filename='images/logoblue.jpg') }}" alt="Dengue Awareness Logo" class="logo">
+                <a href="/" id="navbar__logo">Dengue</a>
+            </div>
+
+            <button class="navbar__toggle" id="mobile-menu" aria-label="Toggle navigation" aria-expanded="false">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <!-- Navigation Bar -->
+            <ul class="navbar__menu">
+                <li class="navbar__item"><a href="/" id="homeBtn" class="navbar__links active">Home</a></li>
+                <li class="navbar__item"><a href="about" class="navbar__links">Health</a></li>
+            </ul>
+        </nav>
+    </header>
+
+   
+
+    <!-- Main Section -->
+    <main>
+        <section id="homeSection" class="main">
+            <div class="main__container">
+                <div class="main__content">
+                    <h1>Dengue Awareness in the Philippines</h1>
+                    <h2>2019-2021</h2>
+                    <p>Protect Yourself from the Mosquito</p>
+                </div>
+                <div class="main__img--container">
+                    <img src="static/images/undraw_doctors_djoj (1).svg" alt="Illustration of medical professionals" id="main__img">
+                </div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row justify-center items-center gap-6">
+                <!-- Understanding Dengue Section -->
+                <div class="w-full md:w-2/3 lg:max-w-2xl text-left">
+                    <section id="homesection" class="p-6 bg-blue-400 rounded-xl shadow-lg text-gray-900"> 
+                        <h2 class="text-3xl font-extrabold text-center mb-6">Understanding Dengue</h2>
+                        <p class="text-lg leading-relaxed">
+                            Dengue fever is a mosquito-borne viral infection that affects millions of people worldwide, including the Philippines. It is transmitted by the Aedes aegypti and Aedes albopictus mosquitoes, which thrive in urban and semi-urban areas. The disease can cause flu-like symptoms, and in severe cases, it can lead to serious complications such as dengue hemorrhagic fever or dengue shock syndrome.
+                        </p>
+                        <p class="text-lg leading-relaxed mt-4">
+                            The Philippines has experienced multiple dengue outbreaks over the years. From 2019 to 2021, thousands of cases were reported, prompting government agencies and health organizations to intensify efforts in preventing the spread of the disease.
+                        </p>
+                        <p class="text-lg leading-relaxed mt-4">
+                            Raising awareness and taking preventive measures can help reduce the risk of dengue infections. Simple steps such as eliminating mosquito breeding grounds, using insect repellents, and seeking early medical attention can make a big difference.
+                        </p>
+                    </section>
+                </div>
+            
+                <!-- Image sa gilid (kanan) -->
+                <div class="w-full md:w-1/3 flex justify-center">
+                    <img src="{{ url_for('static', filename='images/myaot.jpg') }}" 
+                         alt="Dengue Awareness Image" 
+                         class="rounded-lg shadow-md w-full h-auto max-w-xs">
+                </div>
+            </div>
+            
+                    
+                        <!-- About Us Section -->
+           <br>
+           <div style="border-bottom: 2px solid black; width: 100%;"></div>
+         <section class="about-section" id="about-us">
+             <h2>GRAPH</h2>
+             <p>The graph below illustrates the number of reported dengue cases in the Philippines 
+                 over the years 2019 to 2021. This data aims to raise awareness and encourage 
+                 preventive measures.</p>
+         </section>    
+        </section>
+    </section>
+
+        <section id="aboutSection" style="display: none;" 
+        class="p-12 bg-white rounded-xl shadow-lg max-w-6xl mx-auto mt-12 flex flex-col md:flex-row items-center space-x-8">
+    
+        <!-- Mas Malaking Image -->
+        <img src="{{ url_for('static', filename='images/dengue.jpg') }}" 
+             alt="Dengue Awareness" 
+             class="w-64 h-64 md:w-80 md:h-80 rounded-xl shadow-md mb-6 md:mb-0">
+    
+        <!-- Mas Malaking Text Content -->
+        <div class="text-gray-900 max-w-2xl">
+            <br>
+            <h2 class="text-4xl font-extrabold text-gray-900 mb-6">Health</h2>
+            <p class="text-xl leading-relaxed">
+                If you suspect you have dengue, you should seek medical care immediately. Dengue is a viral infection that can cause mild to severe symptoms. 
+            </p>
+            <ul class="list-disc list-inside text-lg text-gray-700 space-y-3 mt-4">
+                <li>✅ <b>Treatment </b>
+                <li>✅ Get lots of rest</li>
+                <li>✅ Drink plenty of fluids, especially oral rehydration salts, to prevent dehydration</li>
+                <li>✅ Take acetaminophen (paracetamol) for pain and fever</li>
+                <li>✅ Avoid aspirin and ibuprofen, which can increase the risk of bleeding</li>
+            </ul>
+            <ul class="list-disc list-inside text-lg text-gray-700 space-y-3 mt-4">
+                <li>✅ <b>Severe symptoms </b>
+                <li>✅ Seek hospitalization if you experience warning signs of severe dengue </li>
+                <li>✅ Severe dengue usually requires treatment in a hospital with intravenous (IV) fluids </li>
+                <li>✅ Patients are monitored until their fever breaks and symptoms begin to wane </li>
+            </ul>
+            <ul class="list-disc list-inside text-lg text-gray-700 space-y-3 mt-4">
+                <li>✅ <b>Severe symptoms </b>
+                <li>✅ Sleep under a treated net, especially during the period of illness with fever</li>
+                <li>✅ Avoid being bitten by mosquitoes </li>
+                <li>✅ Reduce places where mosquitoes lay their eggs  </li>
+            </ul>
+            <ul class="list-disc list-inside text-lg text-gray-700 space-y-3 mt-4">
+                <li>✅ <b>Diagnosis  </b>
+                <li>✅Your doctor will evaluate your signs and symptoms</li>
+                <li>✅ Test your blood for evidence of a dengue virus </li>
+                <li>✅ Review your medical and travel history  </li>
+            </ul>
+
+            <section id="aboutsection" class="p-6 bg-yellow-400 rounded-xl shadow-lg max-w-6xl mx-auto mt-14 text-gray-900">
+                        <p class="text-lg leading-relaxed">
+                      Prevention Sleep under a treated net, Avoid being bitten by mosquitoes, 
+                    Reduce places where mosquitoes lay their eggs, Clean up yards and patios, 
+                    and Remove or treat containers that hold water.
+                        </p>
+        </div>
+    </section>
+  
+    <section class="summary-section bg-white dark:bg-gray-800 -xl shadow-lg p-16  mb-16 backdrop-blur-sm bg-opacity-80">
+        <h1 class="text-2xl md:text-3xl font-bold text-gray-800 dark:text-white mb-6"> Dengue Summary</h1>
+
+        <div class="flex flex-col md:flex-row md:space-x-6 space-y-4 md:space-y-0 mb-6">
+            <div class="relative">
+                <label for="summaryYear" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Select Year</label>
+                <select id="summaryYear" class="w-full p-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-800 dark:text-gray-200 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all">
+                    <option value="all">All Years</option>
+                    <!-- Years will be populated dynamically -->
+                </select>
+            </div>
+
+            <div class="relative">
+                <label for="metricType" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Metric</label>
+                <select id="metricType" class="w-full p-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-800 dark:text-gray-200 focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                    <option value="Cases">Cases</option>
+                    <option value="Deaths">Deaths</option>
+                </select>
+            </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-5 gap-6 mb-6">
+            <!-- Card 1: Island Group Donut Chart (Wider) -->
+            <div class="bg-white dark:bg-gray-800 shadow-lg p-6 md:col-span-3">
+                <h2 class="text-xl font-bold text-gray-800 dark:text-white mb-4">Dengue Distribution by Island</h2>
+                <div class="h-[36rem] w-full"> <!-- Increased height and full width -->
+                    <canvas id="islandChart"></canvas>
+                </div>
+            </div>
+        
+            <!-- Card 2: Summary Metrics (Narrower) -->
+            <div class="bg-white dark:bg-gray-800 shadow-lg p-6 md:col-span-2 -xl flex flex-col justify-center">
+                <h2 class="text-xl font-bold text-gray-800 dark:text-white mb-6">Overview Summary</h2>
+                <div class="space-y-8">
+                    <!-- Total Cases/Deaths -->
+                    <div>
+                        <p class="text-sm font-medium text-gray-500 dark:text-gray-400 mb-1">  Total <span id="metricLabel">Cases</span></p>
+                        <p class="text-4xl font-bold text-gray-800 dark:text-white" id="totalCount">-</p>
+                    </div>
+                    
+                    <!-- Year-over-Year Change -->
+                    <div>
+                        <p class="text-sm font-medium text-gray-500 dark:text-gray-400 mb-1">Yearly Change</p>
+                        <p class="text-2xl" id="rateChange">
+                            <span class="text-gray-500">Select year</span>
+                        </p>
+                    </div>
+                    
+                  
+                </div> <div class="h-80"> </div>
+               
+            </div>
+        </div>
+
+        <!-- ===============================================? -->
+        <h1 class="text-2xl md:text-3xl font-bold text-gray-800 dark:text-white mb-6">Dengue Cases & Deaths Data</h1>
+        
+    <!-- Filters Container -->
+<div class="flex flex-col lg:flex-row lg:items-end lg:space-x-6 mb-8 space-y-4 lg:space-y-0">
+    <!-- Island Group Filter -->
+    <div class="w-full lg:w-auto max-w-sm">
+        <label for="islandGroupSelect" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+            Island Group
+        </label>
+        <div class="relative">
+            <select id="islandGroupSelect" class="w-full p-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-800 dark:text-gray-200 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all">
+                <option disabled selected>Loading...</option>
+            </select>
+            <div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
+                <i class="fa fa-map text-gray-400"></i>
+            </div>
+        </div>
+    </div>
+
+    <!-- Region Filter -->
+    <div class="w-full lg:w-auto max-w-sm">
+        <label for="regionSelect" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+            Search for Region
+        </label>
+        <div class="relative">
+            <select id="regionSelect" class="w-full p-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-800 dark:text-gray-200 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all" disabled>
+                <option disabled selected>Select island group first</option>
+            </select>
+            <div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
+                <i class="fa fa-search-location text-gray-400"></i>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add this inside your filters container -->
+<div class="w-full lg:w-auto max-w-sm">
+    <label for="yearSelect" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+        Filter by Year
+    </label>
+    <div class="relative">
+        <select id="yearSelect" class="w-full p-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-800 dark:text-gray-200 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all">
+            <option value="">All Years</option>
+        </select>
+        <div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
+            <i class="fa fa-calendar text-gray-400"></i>
+        </div>
+    </div>
+</div>
+</div>
+
+       <!-- Charts Section -->
+<div class="grid grid-cols-1 gap-8">
+    <!-- Yearly Trends Card -->
+    <div class="bg-white dark:bg-gray-700 shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+        <div class="p-4">
+            <div class="chart-container relative h-[30rem]">
+                <canvas id="death-cases_Chart"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <!-- Location Summary Card -->
+    <div class="bg-white dark:bg-gray-700 shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+        <div class="p-4">
+            <div class="chart-container relative h-[30rem]">
+                <canvas id="location-chart"></canvas>
+            </div>
+        </div>
+    </div>
+</div>
+
+    </section>
+
+
+    
+
+
+</main>
+
+
+    
+      
+<footer class="bg-gray-900 text-white py-10 mt-12">
+    <div class="container mx-auto text-center space-y-12">
+
+        <!-- About Us -->
+        <div>
+            <h2 class="text-2xl font-semibold">About Us</h2>
+            <p class="text-gray-300 mt-2 max-w-lg mx-auto">
+                We are dedicated to raising awareness about Dengue and providing 
+                reliable information to help protect communities.
+            </p>
+        </div>
+
+        <!-- Contact Us -->
+        <div>
+            <h2 class="text-2xl font-semibold">Contact Us</h2>
+            <p class="text-gray-300 mt-2">Address: Bunakan, Madridejos, Cebu</p>
+            <p class="text-gray-300">Phone: +63 945 844 7989</p>
+            <p class="text-gray-300">✉ Email: denguewebsite@gmail.com</p>
+        </div>
+
+        <!-- Social Media -->
+        <div>
+            <h2 class="text-2xl font-semibold">Follow Us</h2>
+            <div class="flex justify-center space-x-6 mt-4">
+                <a href="#" class="text-gray-400 hover:text-blue-400 text-2xl">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-blue-300 text-2xl">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-pink-400 text-2xl">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-red-400 text-2xl">
+                    <i class="fab fa-youtube"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+<script>
+    document.addEventListener("DOMContentLoaded", async () => {
+        const islandCanvas = document.getElementById("islandChart");
+        const totalEl = document.getElementById("totalCount");
+        const rateEl = document.getElementById("rateChange");
+        const yearSelect = document.getElementById("summaryYear");
+        const metricSelect = document.getElementById("metricType");
+        const metricLabelEl = document.getElementById("metricLabel");
+        
+        let islandChart = null;
+        
+        const colors = {
+            luzon: '#3b82f6',
+            visayas: '#10b981',
+            mindanao: '#f59e0b',
+            cases: '#3b82f6',
+            deaths: '#ef4444',
+            background: '#e5e7eb'
+        };
+    
+        async function initDashboard() {
+            try {
+                const years = await fetchData("/api/years");
+                populateDropdown(yearSelect, years, true);
+                
+                if (years.length > 0) {
+                    yearSelect.value = "all";
+                    metricSelect.value = "Cases";
+                    await updateCharts();
+                }
+                
+                yearSelect.addEventListener("change", updateCharts);
+                metricSelect.addEventListener("change", updateCharts);
+                
+            } catch (error) {
+                console.error("Initialization error:", error);
+                showError("Failed to load data");
+            }
+        }
+        
+        async function fetchData(url) {
+            const response = await fetch(url);
+            if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+            return await response.json();
+        }
+        
+        function populateDropdown(selectElement, options, includeAll = false) {
+            selectElement.innerHTML = '';
+            if (includeAll) {
+                const allOpt = document.createElement("option");
+                allOpt.value = "all";
+                allOpt.textContent = "All Years";
+                selectElement.appendChild(allOpt);
+            }
+            options.forEach(option => {
+                const opt = document.createElement("option");
+                opt.value = option;
+                opt.textContent = option;
+                selectElement.appendChild(opt);
+            });
+        }
+        
+        async function updateCharts() {
+            try {
+                showLoadingState();
+                
+                const year = yearSelect.value;
+                const metric = metricSelect.value;
+                
+                if (!year) return;
+                
+                const data = await fetchData(`/api/summary?year=${year}&metric=${metric}`);
+                
+                if (data.error) throw new Error(data.error);
+                
+                renderSummaryData(data);
+                renderIslandDonutChart(data);
+                
+                if (islandChart) {
+                    islandChart.update();
+                }
+                
+            } catch (error) {
+                console.error("Chart update error:", error);
+                showError(error.message);
+            }
+        }
+        function renderSummaryData(data) {
+    // Up arrow SVG
+    const upArrow = `
+        <svg class="w-6 h-6 text-red-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path>
+        </svg>
+    `;
+    
+    // Down arrow SVG
+    const downArrow = `
+        <svg class="w-6 h-6 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+    `;
+    
+    // Info icon SVG
+    const infoIcon = `
+        <svg class="w-6 h-6 text-gray-400 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+        </svg>
+    `;
+    
+    // Calendar icon SVG
+    const calendarIcon = `
+        <svg class="w-6 h-6 text-blue-400 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+        </svg>
+    `;
+
+    metricLabelEl.textContent = data.metric;
+    metricLabelEl.className = "font-bold text-lg";
+    totalEl.textContent = data.total.toLocaleString();
+    totalEl.className = "text-5xl font-bold text-gray-900 dark:text-white";
+    
+    if (data.comparison) {
+        const comp = data.comparison;
+        const trendIcon = comp.trend === "increase" ? upArrow : downArrow;
+        const trendText = comp.trend === "increase" ? 
+            '<span class="text-red-600 dark:text-red-400">increase</span>' : 
+            '<span class="text-green-600 dark:text-green-400">decrease</span>';
+        
+        rateEl.innerHTML = `
+            <div class="flex items-center">
+                ${trendIcon}
+                <div>
+                    <div class="text-3xl font-bold text-gray-800 dark:text-white">
+                        ${Math.abs(comp.percent_change)}%
+                    </div>
+                    <div class="text-md text-gray-600 dark:text-gray-300">
+                        ${trendText} from ${comp.prev_year}
+                    </div>
+                </div>
+            </div>
+            <div class="mt-4 grid grid-cols-2 gap-4">
+                <div class="bg-blue-50 dark:bg-gray-700 p-3 rounded-lg">
+                    <div class="text-sm text-gray-500 dark:text-gray-400">${comp.current_year}</div>
+                    <div class="text-xl font-bold">${comp.current_total.toLocaleString()}</div>
+                </div>
+                <div class="bg-blue-50 dark:bg-gray-700 p-3 rounded-lg">
+                    <div class="text-sm text-gray-500 dark:text-gray-400">${comp.prev_year}</div>
+                    <div class="text-xl font-bold">${comp.prev_total.toLocaleString()}</div>
+                </div>
+            </div>
+        `;
+    } else if (data.year && data.year.toLowerCase() !== "all") {
+        rateEl.innerHTML = `
+            <div class="text-center py-4">
+                ${infoIcon}
+                <p class="text-gray-500 dark:text-gray-400">No comparable data for previous year</p>
+            </div>
+        `;
+    } else {
+        rateEl.innerHTML = `
+            <div class="text-center py-4">
+                ${calendarIcon}
+                <p class="text-gray-500 dark:text-gray-400">Multi-year summary data</p>
+            </div>
+        `;
+    }
+}
+        
+        function renderIslandDonutChart(data) {
+            const islandData = data.island_totals;
+            const isAllYears = data.year && data.year.toLowerCase() === "all";
+            
+            const chartData = {
+                labels: islandData.map(item => item.island),
+                datasets: [{
+                    data: islandData.map(item => item.total),
+                    backgroundColor: [
+                        colors.luzon,
+                        colors.visayas,
+                        colors.mindanao
+                    ],
+                    borderWidth: 2,
+                    borderColor: '#fff',
+                    hoverBorderWidth: 3,
+                    hoverBorderColor: '#fff'
+                }]
+            };
+            
+            const options = {
+                responsive: true,
+                maintainAspectRatio: false,
+                cutout: '40%',
+                plugins: {
+                    title: {
+                        display: true,
+                        text: `Dengue ${data.metric} by Island Group${isAllYears ? "" : ` (${data.year})`}`,
+                        font: {
+                            size: 18,
+                            weight: 'bold'
+                        },
+                        padding: {
+                            top: 10,
+                            bottom: 20
+                        }
+                    },
+                    legend: {
+                        position: 'bottom',
+                        labels: {
+                            boxWidth: 12,
+                            padding: 20,
+                            usePointStyle: true,
+                            font: {
+                                size: 14,
+                                weight: 'bold'
+                            }
+                        }
+                    },
+                    tooltip: {
+                        enabled: true,
+                        backgroundColor: 'rgba(0, 0, 0, 0.9)',
+                        titleFont: {
+                            size: 16,
+                            weight: 'bold'
+                        },
+                        bodyFont: {
+                            size: 14,
+                            weight: 'bold'
+                        },
+                        padding: 12,
+                        displayColors: true,
+                        callbacks: {
+                            label: function(context) {
+                                const total = context.dataset.data.reduce((a, b) => a + b, 0);
+                                const percent = Math.round((context.raw / total) * 100);
+                                return `${context.label}: ${context.raw.toLocaleString()} (${percent}%)`;
+                            }
+                        }
+                    }
+                }
+            };
+            
+            if (islandChart) {
+                islandChart.destroy();
+            }
+            
+            islandChart = new Chart(islandCanvas, {
+                type: 'doughnut',
+                data: chartData,
+                options: options
+            });
+        }
+        
+        function showLoadingState() {
+            totalEl.textContent = '--';
+            rateEl.textContent = 'Loading...';
+        }
+        
+        function showError(message) {
+            totalEl.textContent = 'Error';
+            rateEl.innerHTML = `<span class="text-red-500">${message}</span>`;
+        }
+        
+        initDashboard();
+    });
+    </script>
+
+<script>
+    const yearBackgroundPlugin = {
+        id: 'yearBackgrounds',
+        beforeDraw(chart) {
+            const { ctx, chartArea: { left, right, top, bottom }, scales: { x } } = chart;
+    
+            if (!x.ticks || !x.ticks.length) return;
+    
+            const yearColors = ['#f3f4f6', '#e5e7eb'];
+            let prevYear = null;
+            let colorIndex = 0;
+            let startX = x.getPixelForTick(0);
+            let midX = startX;
+            let currentYear = null;
+    
+            ctx.save();
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            ctx.font = 'bold 14px Segoe UI';
+            ctx.fillStyle = '#000'; // Faint gray text
+    
+            for (let i = 0; i < x.ticks.length; i++) {
+                const tick = x.ticks[i];
+                const labelDate = new Date(x.getLabelForValue(tick.value));
+                const year = labelDate.getFullYear();
+    
+                if (year !== prevYear && prevYear !== null) {
+                    const endX = x.getPixelForTick(i);
+    
+                    ctx.fillStyle = yearColors[colorIndex % yearColors.length];
+                    ctx.fillRect(startX, top, endX - startX, bottom - top);
+    
+                    midX = (startX + endX) / 2;
+                    ctx.fillStyle = 'rgba(0, 0, 0, 0.08)';
+                    ctx.fillText(prevYear.toString(), midX, (top + bottom) / 2);
+    
+                    startX = endX;
+                    colorIndex++;
+                }
+    
+                prevYear = year;
+            }
+    
+            // Final range (last year)
+            ctx.fillStyle = yearColors[colorIndex % yearColors.length];
+            ctx.fillRect(startX, top, right - startX, bottom - top);
+            midX = (startX + right) / 2;
+            ctx.fillStyle = 'rgba(0, 0, 0, 0.08)';
+            ctx.fillText(prevYear.toString(), midX, (top + bottom) / 2);
+    
+            ctx.restore();
+        }
+    };
+    
+    // Add totals display plugin
+    const totalsDisplayPlugin = {
+        id: 'totalsDisplay',
+        beforeDraw(chart, args, options) {
+            if (!options.display) return;
+            
+            const { ctx, chartArea: { top, right, bottom, left } } = chart;
+            const padding = 20;
+            
+            ctx.save();
+            
+            // Determine position based on options
+            let x, y, textAlign;
+            switch (options.position) {
+                case 'top-left':
+                    x = left + padding;
+                    y = top + padding;
+                    textAlign = 'left';
+                    break;
+                case 'bottom-left':
+                    x = left + padding;
+                    y = bottom - padding;
+                    textAlign = 'left';
+                    break;
+                case 'bottom-right':
+                    x = right - padding;
+                    y = bottom - padding;
+                    textAlign = 'right';
+                    break;
+                case 'top-right':
+                default:
+                    x = right - padding;
+                    y = top + padding;
+                    textAlign = 'right';
+            }
+            
+            // Draw background rectangle
+            const textHeight = 40;
+            const textWidth = 200;
+            
+            ctx.fillStyle = 'rgba(255, 255, 255, 0.8)';
+            ctx.strokeStyle = 'rgba(0, 0, 0, 0.1)';
+            ctx.lineWidth = 1;
+            
+            const rectX = textAlign === 'right' ? x - textWidth : x;
+            const rectY = y - 10;
+            const rectWidth = textWidth;
+            const rectHeight = textHeight;
+            
+            ctx.fillRect(rectX, rectY, rectWidth, rectHeight);
+            ctx.strokeRect(rectX, rectY, rectWidth, rectHeight);
+            
+            // Draw text
+            ctx.font = `${options.fontStyle} ${options.fontSize}px Segoe UI`;
+            ctx.fillStyle = options.fontColor;
+            ctx.textAlign = textAlign;
+            ctx.textBaseline = 'top';
+            
+            ctx.fillText(`Total Cases: ${options.totalCases.toLocaleString()}`, x, y);
+            ctx.fillText(`Total Deaths: ${options.totalDeaths.toLocaleString()}`, x, y + 20);
+            
+            ctx.restore();
+        }
+    };
+    
+    let yearlyChart;
+    let locationChart;
+    
+    // Function to calculate totals
+    function calculateTotals(data) {
+        const totalCases = data.cases.reduce((sum, value) => sum + value, 0);
+        const totalDeaths = data.deaths.reduce((sum, value) => sum + value, 0);
+        return { totalCases, totalDeaths };
+    }
+    
+    async function initializeFilters() {
+        const islandRes = await fetch("/api/island-groups");
+        const islandGroups = await islandRes.json();
+        
+        const islandSelect = document.getElementById("islandGroupSelect");
+        islandSelect.innerHTML = islandGroups.map(ig => 
+            `<option value="${ig}">${ig}</option>`
+        ).join("");
+        
+        const yearRes = await fetch("/api/years");
+        const years = await yearRes.json();
+        const yearSelect = document.getElementById("yearSelect");
+        yearSelect.innerHTML = '<option value="">All Years</option>' + 
+            years.map(y => `<option value="${y}">${y}</option>`).join("");
+    
+        islandSelect.value = "All Island Groups";
+        await loadRegions("All Island Groups");
+    }
+    
+    async function loadRegions(islandGroup) {
+        const regionRes = await fetch(`/api/regions?island_group=${encodeURIComponent(islandGroup)}`);
+        const regions = await regionRes.json();
+        
+        const regionSelect = document.getElementById("regionSelect");
+        regionSelect.innerHTML = regions.map(r => 
+            `<option value="${r}">${r}</option>`
+        ).join("");
+        
+        regionSelect.disabled = regions.length === 0;
+        
+        if (regions.length > 0) {
+            regionSelect.value = regions[0];
+            updateCharts(regions[0]);
+        }
+    }
+    
+    async function updateCharts(region) {
+        const year = document.getElementById("yearSelect").value;
+        const yearlyRes = await fetch(`/api/data?region=${encodeURIComponent(region)}&year=${year}`);
+        const yearlyData = await yearlyRes.json();
+    
+        // Calculate totals
+        const { totalCases, totalDeaths } = calculateTotals(yearlyData);
+    
+        const yearlyCtx = document.getElementById('death-cases_Chart').getContext('2d');
+    
+        if (yearlyChart) yearlyChart.destroy();
+    
+        yearlyChart = new Chart(yearlyCtx, {
+            type: 'line',
+            data: {
+                labels: yearlyData.dates,
+                datasets: [
+                    {
+                        label: 'Deaths',
+                        data: yearlyData.deaths,
+                        backgroundColor: 'rgba(239, 68, 68, 0.2)',
+                        borderColor: 'rgba(239, 68, 68, 1)',
+                        borderWidth: 3,
+                        borderJoinStyle: 'round',
+                        borderCapStyle: 'round',
+                        pointBackgroundColor: 'rgba(239, 68, 68, 1)',
+                        pointBorderColor: '#fff',
+                        pointBorderWidth: 2,
+                        pointRadius: 4,
+                        pointHoverRadius: 6,
+                        pointHitRadius: 10,
+                        tension: 0.3,
+                        fill: true
+                    },
+                    {
+                        label: 'Cases',
+                        data: yearlyData.cases,
+                        backgroundColor: 'rgba(59, 130, 246, 0.2)',
+                        borderColor: 'rgba(59, 130, 246, 1)',
+                        borderWidth: 3,
+                        borderJoinStyle: 'round',
+                        borderCapStyle: 'round',
+                        pointBackgroundColor: 'rgba(59, 130, 246, 1)',
+                        pointBorderColor: '#fff',
+                        pointBorderWidth: 2,
+                        pointRadius: 4,
+                        pointHoverRadius: 6,
+                        pointHitRadius: 10,
+                        tension: 0.3,
+                        fill: true
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'Dengue Cases & Deaths Over Time',
+                        font: {
+                            size: 18,
+                            weight: 'bold',
+                            family: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif"
+                        },
+                        padding: {
+                            top: 10,
+                            bottom: 20
+                        },
+                        color: '#333'
+                    },
+                    legend: {
+                        position: 'top',
+                        labels: {
+                            boxWidth: 12,
+                            padding: 20,
+                            usePointStyle: true,
+                            pointStyle: 'circle',
+                            font: {
+                                size: 13
+                            }
+                        }
+                    },
+                    tooltip: {
+                        backgroundColor: 'rgba(0, 0, 0, 0.8)',
+                        titleFont: {
+                            size: 14,
+                            weight: 'bold'
+                        },
+                        bodyFont: {
+                            size: 12
+                        },
+                        padding: 12,
+                        cornerRadius: 6,
+                        displayColors: true,
+                        callbacks: {
+                            title: context => {
+                                const rawLabel = context[0].label;
+                                const date = new Date(rawLabel);
+                                const year = date.getFullYear();
+                                const month = date.toLocaleString('default', { month: 'short' });
+                                const day = date.getDate();
+    
+                                return [`Year: ${year}`, `Date: ${month} ${day}`];
+                            },
+                            label: context => `${context.dataset.label}: ${context.formattedValue}`
+                        }
+                    },
+                    totalsDisplay: {
+                        display: true,
+                        totalCases: totalCases,
+                        totalDeaths: totalDeaths,
+                        fontStyle: 'bold',
+                        fontColor: '#333',
+                        fontSize: 14,
+                        position: 'top-right'
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Total Count',
+                            font: {
+                                weight: 'bold',
+                                size: 14
+                            }
+                        },
+                        grid: {
+                            color: 'rgba(0, 0, 0, 0.05)',
+                            drawBorder: false
+                        },
+                        ticks: {
+                            callback: function(value) {
+                                return value >= 1000 ? `${value / 1000}k` : value;
+                            },
+                            padding: 10
+                        }
+                    },
+                    x: {
+                        title: {
+                            display: false,
+                            text: '',
+                            font: {
+                                weight: 'bold',
+                                size: 14
+                            }
+                        },
+                        grid: {
+                            display: false,
+                            drawBorder: false
+                        },
+                        ticks: {
+                            autoSkip: true,
+                            padding: 20,
+                            maxRotation: 0,
+                            minRotation: 0,
+                            callback: function(value, index, ticks) {
+                                const label = this.chart.data.labels[index];
+                                if (!label || isNaN(new Date(label))) return '';
+    
+                                const currentDate = new Date(label);
+                                const month = currentDate.toLocaleString('default', { month: 'short' });
+                                const day = currentDate.getDate();
+                                const year = currentDate.getFullYear();
+    
+                                const prevLabel = this.chart.data.labels[index - 1];
+                                const prevDate = prevLabel && !isNaN(new Date(prevLabel)) ? new Date(prevLabel) : null;
+                                const prevYear = prevDate ? prevDate.getFullYear() : null;
+    
+                                const yearLabel = (index === 0 || year !== prevYear) ? `${year}` : '';
+    
+                                return [`${month} ${day}`, yearLabel];
+                            },
+                            font: {
+                                size: 12
+                            },
+                            color: function(context) {
+                                return context.tick && context.tick.label.includes('\n') ? '#666' : '#333';
+                            }
+                        }
+                    }
+                },
+                interaction: {
+                    intersect: false,
+                    mode: 'index'
+                },
+                elements: {
+                    line: {
+                        cubicInterpolationMode: 'monotone'
+                    }
+                }
+            },
+            plugins: [yearBackgroundPlugin, totalsDisplayPlugin]
+        });
+    
+        const locationRes = await fetch(`/api/location-data?region=${encodeURIComponent(region)}&year=${year}`);
+        const locationData = await locationRes.json();
+    
+        const locationCtx = document.getElementById('location-chart').getContext('2d');
+    
+        if (locationChart) locationChart.destroy();
+    
+        locationChart = new Chart(locationCtx, {
+            type: 'bar',
+            data: {
+                labels: locationData.locations,
+                datasets: [
+                    {
+                        label: 'Deaths',
+                        data: locationData.deaths,
+                        backgroundColor: 'rgba(239, 68, 68, 0.7)',
+                        borderColor: 'rgba(239, 68, 68, 1)',
+                        borderWidth: 1.5,
+                        borderRadius: 8,
+                        borderSkipped: false,
+                        hoverBackgroundColor: 'rgba(239, 68, 68, 0.9)',
+                        hoverBorderColor: 'rgba(239, 68, 68, 1)',
+                        hoverBorderWidth: 2,
+                        categoryPercentage: 0.8,
+                        barPercentage: 0.9
+                    },
+                    {
+                        label: 'Cases',
+                        data: locationData.cases,
+                        backgroundColor: 'rgba(59, 130, 246, 0.7)',
+                        borderColor: 'rgba(59, 130, 246, 1)',
+                        borderWidth: 1.5,
+                        borderRadius: 1,
+                        borderSkipped: false,
+                        hoverBackgroundColor: 'rgba(59, 130, 246, 0.9)',
+                        hoverBorderColor: 'rgba(59, 130, 246, 1)',
+                        hoverBorderWidth: 2,
+                        categoryPercentage: 0.8,
+                        barPercentage: 0.9
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'Location-wise Dengue Cases & Deaths',
+                        font: {
+                            size: 18,
+                            weight: 'bold',
+                            family: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif"
+                        },
+                        padding: {
+                            top: 10,
+                            bottom: 20
+                        },
+                        color: '#333'
+                    },
+                    legend: {
+                        position: 'top',
+                        labels: {
+                            boxWidth: 12,
+                            padding: 20,
+                            usePointStyle: true,
+                            pointStyle: 'circle',
+                            font: {
+                                size: 13
+                            }
+                        }
+                    },
+                    tooltip: {
+                        backgroundColor: 'rgba(0, 0, 0, 0.8)',
+                        titleFont: {
+                            size: 14,
+                            weight: 'bold'
+                        },
+                        bodyFont: {
+                            size: 12
+                        },
+                        padding: 12,
+                        cornerRadius: 6,
+                        displayColors: true,
+                        callbacks: {
+                            title: context => `Location: ${context[0].label}`,
+                            label: context => `${context.dataset.label}: ${context.formattedValue}`
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Total Count',
+                            font: {
+                                weight: 'bold',
+                                size: 14
+                            }
+                        },
+                        grid: {
+                            color: 'rgba(0, 0, 0, 0.05)',
+                            drawBorder: false
+                        },
+                        ticks: {
+                            callback: function(value) {
+                                return value >= 1000 ? `${value / 1000}k` : value;
+                            },
+                            padding: 10
+                        }
+                    },
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Location',
+                            font: {
+                                weight: 'bold',
+                                size: 14
+                            }
+                        },
+                        grid: {
+                            display: false,
+                            drawBorder: false
+                        },
+                        ticks: {
+                            autoSkip: false
+                        }
+                    }
+                },
+                interaction: {
+                    intersect: false,
+                    mode: 'index'
+                }
+            }
+        });
+    }
+    
+    function getChartOptions(title, xAxisLabel) {
+        return {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                title: {
+                    display: true,
+                    text: title,
+                    font: {
+                        size: 16,
+                        weight: 'bold'
+                    },
+                    padding: {
+                        top: 10,
+                        bottom: 20
+                    }
+                },
+                legend: {
+                    position: 'top',
+                    labels: {
+                        boxWidth: 12,
+                        padding: 20,
+                        usePointStyle: true,
+                        pointStyle: 'circle'
+                    }
+                },
+                tooltip: {
+                    backgroundColor: 'rgba(0, 0, 0, 0.8)',
+                    titleFont: {
+                        size: 14,
+                        weight: 'bold'
+                    },
+                    bodyFont: {
+                        size: 12
+                    },
+                    padding: 10,
+                    cornerRadius: 6,
+                    displayColors: true,
+                    callbacks: {
+                        title: context => `${xAxisLabel}: ${context[0].label}`,
+                        label: context => `${context.dataset.label}: ${context.formattedValue}`
+                    }
+                }
+            },
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    title: {
+                        display: true,
+                        text: 'Total Count',
+                        font: {
+                            weight: 'bold'
+                        }
+                    },
+                    grid: {
+                        color: 'rgba(0, 0, 0, 0.05)'
+                    },
+                    ticks: {
+                        callback: function(value) {
+                            return value >= 1000 ? `${value / 1000}k` : value;
+                        }
+                    }
+                },
+                x: {
+                    title: {
+                        display: true,
+                        text: xAxisLabel,
+                        font: {
+                            weight: 'bold'
+                        }
+                    },
+                    grid: {
+                        display: false
+                    }
+                }
+            },
+            options: {
+                animations: {
+                    x: {
+                        duration: 1000,
+                        easing: 'easeInOutQuart',
+                        from: -100,
+                    }
+                }
+            },
+            onClick: (event, elements) => {
+                if (elements.length > 0) {
+                    const chart = this;
+                    const element = elements[0];
+                    const datasetIndex = element.datasetIndex;
+                    const index = element.index;
+                    const value = chart.data.datasets[datasetIndex].data[index];
+                    const label = chart.data.labels[index];
+                    const datasetLabel = chart.data.datasets[datasetIndex].label;
+    
+                    alert(`${datasetLabel} in ${label}: ${value}`);
+                }
+            }
+        };
+    }
+    
+    document.getElementById("islandGroupSelect").addEventListener("change", async (e) => {
+        await loadRegions(e.target.value);
+    });
+    
+    document.getElementById("regionSelect").addEventListener("change", (e) => {
+        updateCharts(e.target.value);
+    });
+    
+    document.getElementById("yearSelect").addEventListener("change", () => {
+        const region = document.getElementById("regionSelect").value;
+        if (region) updateCharts(region);
+    });
+    
+    window.addEventListener('DOMContentLoaded', initializeFilters);
+    </script>
+
+
+</body>
+</html>
